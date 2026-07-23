@@ -1,0 +1,15 @@
+.twitch-hide-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.twitch-hide-button:hover {
+  background: #eb0400;
+}
