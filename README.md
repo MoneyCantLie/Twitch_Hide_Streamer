@@ -10,6 +10,10 @@ Chrome extension that lets you hide unwanted or uninteresting streamers on Twitc
 - ↩️ Unhide a channel anytime with the "Remove" button
 - 🔢 Badge counter on the toolbar icon showing how many channels are currently hidden
 
+## Screenshots
+
+![Popup example](screenshots/popup-example.png)
+![Sidebar hide button example](screenshots/sidebar-example.png)
 
 ## Installation
 
