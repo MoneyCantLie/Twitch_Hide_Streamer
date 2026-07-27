@@ -44,9 +44,13 @@ function addHideButtons() {
         const channelName = link.getAttribute('href').replace('/', '');
 
         if (!hiddenChannels.some(ch => ch.name === channelName)) {
+          const avatarImg = card.querySelector('img[src*="profile_image"]');
+          const avatarUrl = avatarImg ? avatarImg.src : null;
+
           hiddenChannels.push({
             name: channelName,
-            hiddenAt: new Date().toISOString().split('T')[0]
+            hiddenAt: new Date().toISOString().split('T')[0],
+            avatarUrl: avatarUrl
           });
           chrome.storage.local.set({ hiddenChannels: hiddenChannels }, () => {
             card.style.setProperty('display', 'none', 'important');
@@ -106,9 +110,13 @@ function addSidebarHideButtons() {
         const channelName = link.getAttribute('href').replace('/', '');
 
         if (!hiddenChannels.some(ch => ch.name === channelName)) {
+          const avatarImg = card.querySelector('img[src*="profile_image"]');
+          const avatarUrl = avatarImg ? avatarImg.src : null;
+
           hiddenChannels.push({
             name: channelName,
-            hiddenAt: new Date().toISOString().split('T')[0]
+            hiddenAt: new Date().toISOString().split('T')[0],
+            avatarUrl: avatarUrl
           });
           chrome.storage.local.set({ hiddenChannels: hiddenChannels }, () => {
             card.style.setProperty('display', 'none', 'important');
