@@ -17,6 +17,8 @@ function hideChannels() {
 
 function addHideButtons() {
   document.querySelectorAll('a[data-a-target="preview-card-image-link"]').forEach(link => {
+    if (link.getAttribute('href').includes('/clip/')) return;
+
     const card = link.closest('.shelf-card__impression-wrapper') || link.closest('article');
     if (!card) return;
 
