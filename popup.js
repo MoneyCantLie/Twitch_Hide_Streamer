@@ -87,4 +87,22 @@ document.getElementById('searchInput').addEventListener('input', (event) => {
   renderList(event.target.value);
 });
 
+document.getElementById('clearAllButton').addEventListener('click', () => {
+  const confirmed = confirm('Remove all hidden channels?');
+  if (!confirmed) return;
+
+  chrome.storage.local.set({ hiddenChannels: [] }, () => {
+    renderList();
+  });
+});
+
+document.getElementById('toggleAddButton').addEventListener('click', () => {
+  const input = document.getElementById('channelInput');
+  const button = document.getElementById('addButton');
+  const isHidden = input.style.display === 'none';
+
+  input.style.display = isHidden ? 'block' : 'none';
+  button.style.display = isHidden ? 'inline-block' : 'none';
+});
+
 renderList();

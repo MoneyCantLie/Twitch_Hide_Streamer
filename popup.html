@@ -8,10 +8,14 @@
   <div class="header">
     <img src="icons/icon48.png" width="24" height="24" alt="logo">
     <h3>Hidden channels (0)</h3>
+    <div class="header-actions">
+      <button id="toggleAddButton" title="Add channel">+</button>
+      <button id="clearAllButton" title="Remove all">🗑</button>
+    </div>
   </div>
 
-  <input type="text" id="channelInput" placeholder="Channel name">
-  <button id="addButton">Hide</button>
+  <input type="text" id="channelInput" placeholder="Channel name" style="display: none;">
+  <button id="addButton" style="display: none;">Hide</button>
 
   <input type="text" id="searchInput" placeholder="Search hidden channels...">
 

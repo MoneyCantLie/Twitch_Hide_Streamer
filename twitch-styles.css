@@ -3,7 +3,7 @@
   height: 20px;
   border-radius: 50%;
   border: none;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.92);
   color: white;
   font-size: 12px;
   line-height: 1;
@@ -12,4 +12,43 @@
 
 .twitch-hide-button:hover {
   background: #eb0400;
+}
+
+#twitch-hide-banner {
+  position: absolute;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.92);
+  color: #efeff1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, Arial, sans-serif;
+  text-align: center;
+}
+
+#twitch-hide-banner p {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+#twitch-hide-banner div {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+#twitch-hide-banner button {
+  background: #9146FF;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#twitch-hide-banner button:hover {
+  background: #772ce8;
 }
